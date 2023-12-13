@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Tipos de cervezas. Constantes y no hay intención de que sea expansible
 enum BeerType: String, CaseIterable, Codable {
     case Bock
     case Dunkel

@@ -7,9 +7,15 @@
 
 import Foundation
 
+/// Modelo del manufacturador de cervezas
 struct ManufacturerModel: Codable {
+    /// Localización del manufacturador y sus cervezas. Se gestiona mediante el subsistema `Locale` de *Swift*.
     var location: String
+    /// Ruta del logotipo del manufacturador. Se gestiona mediante el `ImageManager`
     var logoPath: String
     var name: String
     var beers: [BeerModel]
+    
+    /// Cadena de texto identificativa del manufacturador. No pueden existir dos iguales.
+    lazy var id = "\(location)/\(name)"
 }
