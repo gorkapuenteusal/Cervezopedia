@@ -8,11 +8,14 @@
 import Foundation
 
 /// Modelo de la cerveza.
-struct BeerModel: Codable {
+struct BeerModel: Codable, Equatable {
     var name: String
     var type: BeerType
     var alcoholContent: Double
     var caloricIntake: Int
+    
+    /// Cadena de texto identificativa de cada cerveza. No pueden existir dos iguales en el mismo manufacturador.
+    var id: String;
     
     /// Ruta de acceso a la imagen identificativa de la cerveza. Se gestiona mediante el `ImageManager`. Si se modifica a un valor no valido permanecerá el antiguo
     var imagePath: String? {
@@ -34,8 +37,10 @@ struct BeerModel: Codable {
         self.alcoholContent = alcoholContent
         self.caloricIntake = caloricIntake
         self.imagePath = imagePath
+        self.id = name;
     }
     
-    /// Cadena de texto identificativa de cada cerveza. No pueden existir dos iguales en el mismo manufacturador.
-    lazy var id = name;
+    static func == (lhs: BeerModel, rhs: BeerModel) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
