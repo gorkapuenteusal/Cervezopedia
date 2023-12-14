@@ -18,4 +18,9 @@ struct ManufacturerModel: Codable {
     
     /// Cadena de texto identificativa del manufacturador. No pueden existir dos iguales.
     lazy var id = "\(location)/\(name)"
+    
+    /// Devuelve si el productor es local o extranjero respecto a la nacionalidad del usuario.
+    public func isLocal() -> Bool {
+        return Locale.current.identifier == location;
+    }
 }
