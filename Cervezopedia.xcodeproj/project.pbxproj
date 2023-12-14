@@ -14,7 +14,20 @@
 		AA6AFB9E2B2A3D97004892DF /* BeerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AFB9D2B2A3D97004892DF /* BeerType.swift */; };
 		AA6AFBA02B2A401E004892DF /* BeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AFB9F2B2A401E004892DF /* BeerModel.swift */; };
 		AA6AFBA22B2A4472004892DF /* ManufacturerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AFBA12B2A4472004892DF /* ManufacturerModel.swift */; };
+		AAACF2332B2B10AF00639FC0 /* CervezopediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAACF2322B2B10AF00639FC0 /* CervezopediaTests.swift */; };
+		AAACF23A2B2B10F200639FC0 /* ManufacturerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAACF2392B2B10F200639FC0 /* ManufacturerModelTests.swift */; };
+		AAACF23C2B2B404B00639FC0 /* BeerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAACF23B2B2B404B00639FC0 /* BeerModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAACF2342B2B10AF00639FC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0E1FE32B2A349D00049DAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA0E1FEA2B2A349D00049DAF;
+			remoteInfo = Cervezopedia;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AA0E1FEB2B2A349D00049DAF /* Cervezopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cervezopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,10 +38,21 @@
 		AA6AFB9D2B2A3D97004892DF /* BeerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerType.swift; sourceTree = "<group>"; };
 		AA6AFB9F2B2A401E004892DF /* BeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModel.swift; sourceTree = "<group>"; };
 		AA6AFBA12B2A4472004892DF /* ManufacturerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerModel.swift; sourceTree = "<group>"; };
+		AAACF2302B2B10AF00639FC0 /* CervezopediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CervezopediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAACF2322B2B10AF00639FC0 /* CervezopediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CervezopediaTests.swift; sourceTree = "<group>"; };
+		AAACF2392B2B10F200639FC0 /* ManufacturerModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerModelTests.swift; sourceTree = "<group>"; };
+		AAACF23B2B2B404B00639FC0 /* BeerModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AA0E1FE82B2A349D00049DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAACF22D2B2B10AF00639FC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0E1FED2B2A349D00049DAF /* Cervezopedia */,
+				AAACF2312B2B10AF00639FC0 /* CervezopediaTests */,
 				AA0E1FEC2B2A349D00049DAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0E1FEB2B2A349D00049DAF /* Cervezopedia.app */,
+				AAACF2302B2B10AF00639FC0 /* CervezopediaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +102,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AAACF2312B2B10AF00639FC0 /* CervezopediaTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAACF23B2B2B404B00639FC0 /* BeerModelTests.swift */,
+				AAACF2322B2B10AF00639FC0 /* CervezopediaTests.swift */,
+				AAACF2392B2B10F200639FC0 /* ManufacturerModelTests.swift */,
+			);
+			path = CervezopediaTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,6 +132,24 @@
 			productReference = AA0E1FEB2B2A349D00049DAF /* Cervezopedia.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AAACF22F2B2B10AF00639FC0 /* CervezopediaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAACF2362B2B10AF00639FC0 /* Build configuration list for PBXNativeTarget "CervezopediaTests" */;
+			buildPhases = (
+				AAACF22C2B2B10AF00639FC0 /* Sources */,
+				AAACF22D2B2B10AF00639FC0 /* Frameworks */,
+				AAACF22E2B2B10AF00639FC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAACF2352B2B10AF00639FC0 /* PBXTargetDependency */,
+			);
+			name = CervezopediaTests;
+			productName = CervezopediaTests;
+			productReference = AAACF2302B2B10AF00639FC0 /* CervezopediaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -108,6 +162,10 @@
 				TargetAttributes = {
 					AA0E1FEA2B2A349D00049DAF = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					AAACF22F2B2B10AF00639FC0 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = AA0E1FEA2B2A349D00049DAF;
 					};
 				};
 			};
@@ -125,6 +183,7 @@
 			projectRoot = "";
 			targets = (
 				AA0E1FEA2B2A349D00049DAF /* Cervezopedia */,
+				AAACF22F2B2B10AF00639FC0 /* CervezopediaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -136,6 +195,13 @@
 			files = (
 				AA0E1FF62B2A349F00049DAF /* Preview Assets.xcassets in Resources */,
 				AA0E1FF32B2A349F00049DAF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAACF22E2B2B10AF00639FC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +220,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AAACF22C2B2B10AF00639FC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAACF23A2B2B10F200639FC0 /* ManufacturerModelTests.swift in Sources */,
+				AAACF2332B2B10AF00639FC0 /* CervezopediaTests.swift in Sources */,
+				AAACF23C2B2B404B00639FC0 /* BeerModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAACF2352B2B10AF00639FC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA0E1FEA2B2A349D00049DAF /* Cervezopedia */;
+			targetProxy = AAACF2342B2B10AF00639FC0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AA0E1FF72B2A349F00049DAF /* Debug */ = {
@@ -327,6 +411,40 @@
 			};
 			name = Release;
 		};
+		AAACF2372B2B10AF00639FC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.gorkiiuss.CervezopediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cervezopedia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cervezopedia";
+			};
+			name = Debug;
+		};
+		AAACF2382B2B10AF00639FC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.gorkiiuss.CervezopediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cervezopedia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cervezopedia";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -344,6 +462,15 @@
 			buildConfigurations = (
 				AA0E1FFA2B2A349F00049DAF /* Debug */,
 				AA0E1FFB2B2A349F00049DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAACF2362B2B10AF00639FC0 /* Build configuration list for PBXNativeTarget "CervezopediaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAACF2372B2B10AF00639FC0 /* Debug */,
+				AAACF2382B2B10AF00639FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
