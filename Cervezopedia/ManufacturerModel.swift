@@ -8,7 +8,7 @@
 import Foundation
 
 /// Modelo del manufacturador de cervezas
-struct ManufacturerModel: Codable {
+struct ManufacturerModel: Codable, Equatable {
     var name: String
     var beers: [BeerModel]
     
@@ -31,7 +31,7 @@ struct ManufacturerModel: Codable {
     }
     
     /// Cadena de texto identificativa del manufacturador. No pueden existir dos iguales.
-    lazy var id = "\(location)/\(name)"
+    var id: String
     
     
     /// Inicializador opcional. Si el `location` que se pasa como parámetro no es un identificador de ningún `Locale` devuelve `nil`. Si el `logoPath` que se pasa como parámetro no es `nil` y encima no existe en el `ImageManager` devuelve `nil`.
@@ -48,6 +48,24 @@ struct ManufacturerModel: Codable {
         self.location = location
         self.logoPath = logoPath
         self.beers = []
+        self.id = "\(location)/\(name)"
+    }
+
+    /// Inicializador opcional. Permite elegir sus cervezas desde que es inicializado
+    init?(name: String, location: String, logoPath: String?, beers: [BeerModel]) {
+        guard Locale.Region.isoRegions.contains(where: { $0.identifier == location}) else {
+            return nil
+        }
+        
+        guard logoPath == nil /* TODO 14/12/2023 ImageManager.Instance.exists(logoPath) */ else {
+            return nil
+        }
+        
+        self.name = name
+        self.location = location
+        self.logoPath = logoPath
+        self.beers = beers
+        self.id = "\(location)/\(name)"
     }
     
     /// Devuelve `true`si el productor es **nacional** y `false` si es **importado**  respecto a la nacionalidad del usuario.
@@ -57,5 +75,9 @@ struct ManufacturerModel: Codable {
         } else {
             return false
         }
+    }
+    
+    static func == (lhs: ManufacturerModel, rhs: ManufacturerModel) -> Bool {
+        return lhs.id == rhs.id
     }
 }
