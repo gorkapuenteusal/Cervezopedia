@@ -7,8 +7,8 @@
 
 import Foundation
 
-/// Modelo del manufacturador de cervezas
-struct ManufacturerModel: Codable, Equatable {
+/// Modelo del manufacturador de cervezass
+struct ManufacturerModel: Codable, Equatable, Identifiable {
     var name: String
     var beers: [BeerModel]
     
