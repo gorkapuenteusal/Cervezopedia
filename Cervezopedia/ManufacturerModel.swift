@@ -21,11 +21,11 @@ struct ManufacturerModel: Codable, Equatable, Identifiable {
         }
     }
     
-    /// Ruta del logotipo del manufacturador. Se gestiona mediante el `ImageManager`. Si se modifica a un valor no valido permanecerá el antiguo
-    var logoPath: String? {
+    /// Ruta del logotipo del manufacturador. Se gestiona mediante el `LogoManager`. Si se modifica a un valor no valido permanecerá el antiguo
+    var logoName: String? {
         didSet {
-            if logoPath != nil /* TODO 14/12/2023 ImageManager.Instance.exists(logoPath) */ {
-                logoPath = oldValue
+            if logoName != nil || !LogoManager.shared.existsLogo(withName: logoName!) {
+                logoName = oldValue
             }
         }
     }
@@ -34,36 +34,36 @@ struct ManufacturerModel: Codable, Equatable, Identifiable {
     var id: String
     
     
-    /// Inicializador opcional. Si el `location` que se pasa como parámetro no es un identificador de ningún `Locale` devuelve `nil`. Si el `logoPath` que se pasa como parámetro no es `nil` y encima no existe en el `ImageManager` devuelve `nil`.
-    init?(name: String, location: String, logoPath: String?) {
+    /// Inicializador opcional. Si el `location` que se pasa como parámetro no es un identificador de ningún `Locale` devuelve `nil`. Si el `logoPath` que se pasa como parámetro no es `nil` y encima no existe en el `LogoManager` devuelve `nil`.
+    init?(name: String, location: String, withLogoName logoName: String?) {
         guard Locale.Region.isoRegions.contains(where: { $0.identifier == location}) else {
             return nil
         }
         
-        guard logoPath == nil /* TODO 14/12/2023 ImageManager.Instance.exists(logoPath) */ else {
+        guard logoName == nil || LogoManager.shared.existsLogo(withName: logoName!) else {
             return nil
         }
         
         self.name = name
         self.location = location
-        self.logoPath = logoPath
+        self.logoName = logoName
         self.beers = []
         self.id = "\(location)/\(name)"
     }
 
     /// Inicializador opcional. Permite elegir sus cervezas desde que es inicializado
-    init?(name: String, location: String, logoPath: String?, beers: [BeerModel]) {
+    init?(name: String, location: String, withLogoName logoName: String?, beers: [BeerModel]) {
         guard Locale.Region.isoRegions.contains(where: { $0.identifier == location}) else {
             return nil
         }
         
-        guard logoPath == nil /* TODO 14/12/2023 ImageManager.Instance.exists(logoPath) */ else {
+        guard logoName == nil || LogoManager.shared.existsLogo(withName: logoName!) else {
             return nil
         }
         
         self.name = name
         self.location = location
-        self.logoPath = logoPath
+        self.logoName = logoName
         self.beers = beers
         self.id = "\(location)/\(name)"
     }

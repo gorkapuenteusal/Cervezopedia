@@ -32,7 +32,7 @@ final class ManufacturerManager: ObservableObject { // TODO: - Puede ser que hay
             manufacturers[index].id = edited.id
             manufacturers[index].name = edited.name
             manufacturers[index].location = edited.location
-            manufacturers[index].logoPath = edited.logoPath
+            manufacturers[index].logoName = edited.logoName
             manufacturers[index].beers = edited.beers
             return true
         }
