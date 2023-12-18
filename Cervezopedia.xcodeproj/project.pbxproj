@@ -107,18 +107,12 @@
 		AA0E1FED2B2A349D00049DAF /* Cervezopedia */ = {
 			isa = PBXGroup;
 			children = (
-				AAACF2412B2B5D7700639FC0 /* Serializer.swift */,
+				AA8F2E4E2B30C3C00024978F /* IO */,
+				AA8F2E4F2B30C3EE0024978F /* Image */,
+				AA8F2E502B30C4100024978F /* Managers */,
+				AA8F2E512B30C4330024978F /* Data */,
 				AA0E1FEE2B2A349E00049DAF /* CervezopediaApp.swift */,
 				AA0E1FF02B2A349E00049DAF /* ContentView.swift */,
-				AA6AFB9F2B2A401E004892DF /* BeerModel.swift */,
-				AAE8539A2B2DF9FF009477DF /* ImageManager.swift */,
-				AA6B10EB2B2F6D4300146B08 /* ImageCacheEntry.swift */,
-				AA6B10ED2B2F6E3900146B08 /* ImageCache.swift */,
-				AA6B10E72B2F63E400146B08 /* LogoManager.swift */,
-				AA6B10EF2B2F7DDC00146B08 /* BeerImageManager.swift */,
-				AA6AFB9D2B2A3D97004892DF /* BeerType.swift */,
-				AA6AFBA12B2A4472004892DF /* ManufacturerModel.swift */,
-				AAA3594C2B2DC5550021CAF0 /* ManufacturerManager.swift */,
 				AA0E1FF22B2A349F00049DAF /* Assets.xcassets */,
 				AA0E1FF42B2A349F00049DAF /* Preview Content */,
 			);
@@ -131,6 +125,52 @@
 				AA0E1FF52B2A349F00049DAF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AA8F2E4E2B30C3C00024978F /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				AAACF2412B2B5D7700639FC0 /* Serializer.swift */,
+				AAE8539A2B2DF9FF009477DF /* ImageManager.swift */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		AA8F2E4F2B30C3EE0024978F /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B10EB2B2F6D4300146B08 /* ImageCacheEntry.swift */,
+				AA6B10ED2B2F6E3900146B08 /* ImageCache.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		AA8F2E502B30C4100024978F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B10E72B2F63E400146B08 /* LogoManager.swift */,
+				AA6B10EF2B2F7DDC00146B08 /* BeerImageManager.swift */,
+				AAA3594C2B2DC5550021CAF0 /* ManufacturerManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AA8F2E512B30C4330024978F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AA8F2E522B30C4400024978F /* Beer */,
+				AA6AFBA12B2A4472004892DF /* ManufacturerModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AA8F2E522B30C4400024978F /* Beer */ = {
+			isa = PBXGroup;
+			children = (
+				AA6AFB9F2B2A401E004892DF /* BeerModel.swift */,
+				AA6AFB9D2B2A3D97004892DF /* BeerType.swift */,
+			);
+			path = Beer;
 			sourceTree = "<group>";
 		};
 		AAACF2312B2B10AF00639FC0 /* CervezopediaTests */ = {
