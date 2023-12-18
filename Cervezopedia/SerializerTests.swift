@@ -9,30 +9,30 @@ import XCTest
 @testable import Cervezopedia
 
 final class SerializerTests: XCTestCase {
-    lazy var beer: BeerModel = BeerModel(name: "A beer", type: BeerType.Abbey, alcoholContent: 1, caloricIntake: 1, imagePath: nil)!
+    lazy var beer: BeerModel = BeerModel(name: "A beer", type: BeerType.Abbey, alcoholContent: 1, caloricIntake: 1, withImageName: nil)!
     lazy var beerList: [BeerModel] = [
         beer,
-        BeerModel(name: "Another beer", type: BeerType.Altbier, alcoholContent: 2, caloricIntake: 2, imagePath: nil)!,
-        BeerModel(name: "One more beer", type: BeerType.BarleyWine, alcoholContent: 3, caloricIntake: 3, imagePath: nil)!
+        BeerModel(name: "Another beer", type: BeerType.Altbier, alcoholContent: 2, caloricIntake: 2, withImageName: nil)!,
+        BeerModel(name: "One more beer", type: BeerType.BarleyWine, alcoholContent: 3, caloricIntake: 3, withImageName: nil)!
     ]
-    lazy var manufacturer: ManufacturerModel = ManufacturerModel(name: "A manufacturer", location: "US", logoPath: nil, beers: beerList)!
+    lazy var manufacturer: ManufacturerModel = ManufacturerModel(name: "A manufacturer", location: "US", withLogoName: nil, beers: beerList)!
     lazy var manufacturerList: [ManufacturerModel] = [
         manufacturer,
         ManufacturerModel(
             name: "Another manufacturer",
-            location: "AR", logoPath: nil,
+            location: "AR", withLogoName: nil,
             beers: [
-                BeerModel(name: "Yet another beer", type: BeerType.Bitter, alcoholContent: 4, caloricIntake: 4, imagePath: nil)!,
-                BeerModel(name: "One more to go", type: BeerType.Bock, alcoholContent: 5, caloricIntake: 5, imagePath: nil)!
+                BeerModel(name: "Yet another beer", type: BeerType.Bitter, alcoholContent: 4, caloricIntake: 4, withImageName: nil)!,
+                BeerModel(name: "One more to go", type: BeerType.Bock, alcoholContent: 5, caloricIntake: 5, withImageName: nil)!
             ]
         )!,
         ManufacturerModel(
             name: "One more manufacturer",
             location: "ES",
-            logoPath: nil,
+            withLogoName: nil,
             beers: [
-                BeerModel(name: "One more won't hurt", type: BeerType.BrownAle, alcoholContent: 6, caloricIntake: 6, imagePath: nil)!,
-                BeerModel(name: "One more and we are bound", type: BeerType.DoradaPampeana, alcoholContent: 7, caloricIntake: 7, imagePath: nil)!
+                BeerModel(name: "One more won't hurt", type: BeerType.BrownAle, alcoholContent: 6, caloricIntake: 6, withImageName: nil)!,
+                BeerModel(name: "One more and we are bound", type: BeerType.DoradaPampeana, alcoholContent: 7, caloricIntake: 7, withImageName: nil)!
             ]
         )!
     ]

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct ImageCacheEntry {
+struct ImageCacheEntry { // TODO: - en vez de usar esto usar el `accesibilityIdentifier` como nombre de la imagen
     var name: String
     let image: UIImage?
     

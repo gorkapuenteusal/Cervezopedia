@@ -10,10 +10,10 @@ import XCTest
 
 final class ManufacturerManagerTests: XCTestCase {
     let manager = ManufacturerManager.shared
-    lazy var manufacturer = ManufacturerModel(name: "A manufacturer", location: "US", logoPath: nil)!
-    lazy var sameManufacturer = ManufacturerModel(name: "A manufacturer", location: "US", logoPath: nil)!
-    lazy var differentManufacturer = ManufacturerModel(name: "Another manufacturer", location: "ES", logoPath: nil)!
-    lazy var sameDifferentManufacturer = ManufacturerModel(name: "Another manufacturer", location: "ES", logoPath: nil)!
+    lazy var manufacturer = ManufacturerModel(name: "A manufacturer", location: "US", withLogoName: nil)!
+    lazy var sameManufacturer = ManufacturerModel(name: "A manufacturer", location: "US", withLogoName: nil)!
+    lazy var differentManufacturer = ManufacturerModel(name: "Another manufacturer", location: "ES", withLogoName: nil)!
+    lazy var sameDifferentManufacturer = ManufacturerModel(name: "Another manufacturer", location: "ES", withLogoName: nil)!
     
     override func setUp() {
         super.setUp()

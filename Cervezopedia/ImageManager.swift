@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct ImageManager {
+struct ImageManager { // TODO: - Añadir `ErrorType` *enum* para gestionar mejor los errores
     let imagePath: URL
     
     init(imagePath: URL) {
@@ -63,6 +63,11 @@ struct ImageManager {
         } catch {
             return [:]
         }
+    }
+    
+    func existsImage(withName name: String) -> Bool {
+        let fileUrl = getPathToFile(withName: name)
+        return FileManager.default.fileExists(atPath: fileUrl.path)
     }
     
     private func getPathToFile(withName name: String) -> URL {

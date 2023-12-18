@@ -14,8 +14,8 @@ final class BeerModelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        noNilImagePath = BeerModel(name: "name", type: BeerType.Abbey, alcoholContent: 4.5, caloricIntake: 100, imagePath: "no_nil")
-        beer = BeerModel(name: "name", type: BeerType.Abbey, alcoholContent: 4.5, caloricIntake: 100, imagePath: nil)
+        noNilImagePath = BeerModel(name: "name", type: BeerType.Abbey, alcoholContent: 4.5, caloricIntake: 100, withImageName: "no_nil")
+        beer = BeerModel(name: "name", type: BeerType.Abbey, alcoholContent: 4.5, caloricIntake: 100, withImageName: nil)
     }
     
     func testWrongImagePath() {
@@ -23,9 +23,9 @@ final class BeerModelTests: XCTestCase {
     }
     
     func testChangeToWrongImagePath() {
-        let oldValue = beer.imagePath
-        beer.imagePath = "no_nil"
-        XCTAssertEqual(oldValue, beer.imagePath)
+        let oldValue = beer.beerImageName
+        beer.beerImageName = "no_nil"
+        XCTAssertEqual(oldValue, beer.beerImageName)
     }
     
     override func tearDown() {

@@ -24,8 +24,10 @@ struct ManufacturerModel: Codable, Equatable, Identifiable {
     /// Ruta del logotipo del manufacturador. Se gestiona mediante el `LogoManager`. Si se modifica a un valor no valido permanecerá el antiguo
     var logoName: String? {
         didSet {
-            if logoName != nil || !LogoManager.shared.existsLogo(withName: logoName!) {
-                logoName = oldValue
+            if let logoName = self.logoName {
+                guard LogoManager.shared.existsLogo(withName: logoName) else {
+                    self.logoName = oldValue; return
+                }
             }
         }
     }

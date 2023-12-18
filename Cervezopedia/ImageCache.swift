@@ -8,16 +8,16 @@
 import Foundation
 import UIKit
 
-final class ImageCache: ObservableObject {
+final class ImageCache: ObservableObject { // TODO: - Se debería eliminar la opción de añadir un nombre sin imagen. Ésto se había hecho para gestionar los casos en los que al no haber imagen, es decir el valor fuese `nil`, se le pusiese una imagen por defecto. Pero eso mismo lleva a conflictos con el `ImageManager` al que se asocia esta clase en los gestores de logos y de imágenes de cerveza.
     @Published var cache: [ImageCacheEntry] = []
     
-    init(namesAndImages: [String: UIImage]) {
+    init(namesAndImages: [String: UIImage] = [:]) {
         namesAndImages.forEach { key, value in
             _ = addEntry(withName: key, andImage: value)
         }
     }
     
-    func addEntry(withName name: String, andImage image: UIImage?) -> Bool {
+    func addEntry(withName name: String?, andImage image: UIImage?) -> Bool {
         guard let entry = ImageCacheEntry(name: name, image: image) else {
             return false
         }

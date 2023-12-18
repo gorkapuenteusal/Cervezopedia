@@ -31,7 +31,7 @@ final class LogoManager: ObservableObject { // TODO: - Crear vista `LogoManagerV
             if handler.save(image: logo, withName: name) {
                 _ = logoCache.addEntry(withName: name, andImage: logo)
             }
-        } else {
+        } else { // TODO: - Eliminar esta opción
             _ = logoCache.addEntry(withName: name, andImage: logo)
         }
     }
