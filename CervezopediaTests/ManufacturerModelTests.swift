@@ -17,11 +17,11 @@ final class ManufacturerModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        wrongLocation = ManufacturerModel(name: "wrongLocation", location: "wrong", logoPath: nil)
-        noNilLogoPath = ManufacturerModel(name: "noNilLogoPath", location: "US", logoPath: "no_nil")
+        wrongLocation = ManufacturerModel(name: "wrongLocation", location: "wrong", withLogoName: nil)
+        noNilLogoPath = ManufacturerModel(name: "noNilLogoPath", location: "US", withLogoName: "no_nil")
         /// Manufacturador nacional. En este caso la simulación se ejectua como si el usuario fuese estadounidense
-        national = ManufacturerModel(name: "national", location: "US", logoPath: nil)
-        imported = ManufacturerModel(name: "imported", location: "ES", logoPath: nil)
+        national = ManufacturerModel(name: "national", location: "US", withLogoName: nil)
+        imported = ManufacturerModel(name: "imported", location: "ES", withLogoName: nil)
     }
     
     func testWrongLocation() {
@@ -49,9 +49,9 @@ final class ManufacturerModelTests: XCTestCase {
     }
     
     func testChangeToWrongImagePath() {
-        let oldValue = national.logoPath
-        national.logoPath = "no_nil"
-        XCTAssertEqual(oldValue, national.logoPath)
+        let oldValue = national.logoName
+        national.logoName = "no_nil"
+        XCTAssertEqual(oldValue, national.logoName)
     }
     
     override func tearDown() {
