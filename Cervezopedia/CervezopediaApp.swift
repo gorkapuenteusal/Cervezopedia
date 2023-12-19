@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct CervezopediaApp: App {
+struct CervezopediaApp: App { // TODO: !!! - mover de sitio los archivos que están mal
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -12,5 +12,8 @@ struct ContentView: View {
         VStack {
             ManufacturerListView()
         }
+        .onAppear {
+            ManufacturerManager.shared.manufacturers = Serializer.shared.load(key: "manufacturers", defaultValue: [])!
+        }
     }
 }

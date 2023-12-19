@@ -52,6 +52,7 @@ struct AddManufacturerView: View {
     private func addManufacturer() {
         if let toAdd = ManufacturerModel(name: name, location: location, withLogoName: logoName) {
             if (ManufacturerManager.shared.add(toAdd: toAdd)) {
+                Serializer.shared.save(value: ManufacturerManager.shared.manufacturers, key: "manufacturers")
                 isPresented = false
             } else {
                 alertMessage = "Ya existe un fabricante igual"

@@ -66,12 +66,10 @@ final class LogoManager {
         return logoCache.existsImage(withName: name)
     }
     
-    func getLogo(withName name: String?) -> UIImage {
-        if let name = name {
-            if logoCache.existsImage(withName: name) {
-                print("Returning \"\(name)\" logo")
-                return logoCache.getImage(withName: name)!
-            }
+    func getLogo(withName name: String) -> UIImage {
+        if logoCache.existsImage(withName: name) {
+            print("Returning \"\(name)\" logo")
+            return logoCache.getImage(withName: name)!
         }
         print("Returning default logo")
         return Self.defaultLogo
