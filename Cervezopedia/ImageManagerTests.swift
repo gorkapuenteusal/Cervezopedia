@@ -61,7 +61,7 @@ final class ImageManagerTests: XCTestCase {
         XCTAssertEqual([:], wrongPathManager.getNamesAndImages())
     }
     
-    func testGetNamesAndImagesSuccess() { // TODO: - Las imagenes se cargan distintas. Comprobar si eso es cierto.
+    func testGetNamesAndImagesSuccess() {
         saveTheThreeImages()
         let namesAndImagesData = [
             sun: sunImage,

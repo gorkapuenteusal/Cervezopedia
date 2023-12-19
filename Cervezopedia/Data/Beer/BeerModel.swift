@@ -18,17 +18,18 @@ struct BeerModel: Codable, Equatable {
     var id: String;
     
     /// Ruta de acceso a la imagen identificativa de la cerveza. Se gestiona mediante el `BeerImageManager`. Si se modifica a un valor no valido permanecerá el antiguo
-    var beerImageName: String? {
+    var beerImageName: String {
         didSet {
-            if beerImageName != nil || !BeerImageManager.shared.existsBeerImage(withName: beerImageName!) {
+            guard !beerImageName.isEmpty && BeerImageManager.shared.existsBeerImage(withName: beerImageName) else {
                 beerImageName = oldValue
+                return
             }
         }
     }
     
     /// Inicializador opcional. Si el `imagePath` que se pasa como parámetro no es `nil` y encima no existe en el `BeerImageManager` devuelve `nil`.
-    init?(name: String, type: BeerType, alcoholContent: Double, caloricIntake: Int, withImageName imageName: String?) {
-        guard imageName == nil || BeerImageManager.shared.existsBeerImage(withName: imageName!) else {
+    init?(name: String, type: BeerType, alcoholContent: Double, caloricIntake: Int, withImageName imageName: String) {
+        guard imageName.isEmpty || BeerImageManager.shared.existsBeerImage(withName: imageName) else {
             return nil
         }
         

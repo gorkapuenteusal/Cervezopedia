@@ -8,7 +8,8 @@
 import Foundation
 
 /// Modelo del manufacturador de cervezass
-struct ManufacturerModel: Codable, Equatable, Identifiable {
+struct ManufacturerModel: Codable, Equatable, Identifiable, Hashable { // TODO: - Añadir tests para fotos que existan y que no existan
+    static let defaultManufacturer = ManufacturerModel(name: "", location: Locale.current.region!.identifier, withLogoName: "")!
     var name: String
     var beers: [BeerModel]
     
@@ -22,12 +23,11 @@ struct ManufacturerModel: Codable, Equatable, Identifiable {
     }
     
     /// Ruta del logotipo del manufacturador. Se gestiona mediante el `LogoManager`. Si se modifica a un valor no valido permanecerá el antiguo
-    var logoName: String? {
+    var logoName: String {
         didSet {
-            if let logoName = self.logoName {
-                guard LogoManager.shared.existsLogo(withName: logoName) else {
-                    self.logoName = oldValue; return
-                }
+            guard !logoName.isEmpty && LogoManager.shared.existsLogo(withName: logoName) else {
+                logoName = oldValue
+                return
             }
         }
     }
@@ -37,29 +37,29 @@ struct ManufacturerModel: Codable, Equatable, Identifiable {
     
     
     /// Inicializador opcional. Si el `location` que se pasa como parámetro no es un identificador de ningún `Locale` devuelve `nil`. Si el `logoPath` que se pasa como parámetro no es `nil` y encima no existe en el `LogoManager` devuelve `nil`.
-    init?(name: String, location: String, withLogoName logoName: String?) {
+    init?(name: String, location: String, withLogoName logoName: String) {
         guard Locale.Region.isoRegions.contains(where: { $0.identifier == location}) else {
             return nil
         }
         
-        guard logoName == nil || LogoManager.shared.existsLogo(withName: logoName!) else {
+        guard logoName.isEmpty || LogoManager.shared.existsLogo(withName: logoName) else {
             return nil
         }
         
         self.name = name
         self.location = location
-        self.logoName = logoName
+        self.logoName = LogoManager.shared.existsLogo(withName: logoName) ? logoName : ""
         self.beers = []
         self.id = "\(location)/\(name)"
     }
 
     /// Inicializador opcional. Permite elegir sus cervezas desde que es inicializado
-    init?(name: String, location: String, withLogoName logoName: String?, beers: [BeerModel]) {
+    init?(name: String, location: String, withLogoName logoName: String, beers: [BeerModel]) {
         guard Locale.Region.isoRegions.contains(where: { $0.identifier == location}) else {
             return nil
         }
         
-        guard logoName == nil || LogoManager.shared.existsLogo(withName: logoName!) else {
+        guard logoName.isEmpty || LogoManager.shared.existsLogo(withName: logoName) else {
             return nil
         }
         
@@ -81,5 +81,9 @@ struct ManufacturerModel: Codable, Equatable, Identifiable {
     
     static func == (lhs: ManufacturerModel, rhs: ManufacturerModel) -> Bool {
         return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }

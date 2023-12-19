@@ -29,13 +29,7 @@ final class ImageCacheTests: XCTestCase {
         XCTAssertTrue(imageCache.existsImage(withName: heart))
     }
     
-    func testAddEntryFailure() {
-        let nilName: String? = nil
-        let nilImage: UIImage? = nil
-        XCTAssertFalse(imageCache.addEntry(withName: nilName, andImage: nilImage))
-    }
-    
-    func testAddEntrySuccess() {
+    func testAddEntry() {
         XCTAssertTrue(imageCache.addEntry(withName: sun, andImage: sunImage))
         XCTAssertTrue(imageCache.existsImage(withName: sun))
     }
