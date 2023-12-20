@@ -10,7 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            
+            ManufacturerListView()
+        }
+        .onAppear {
+            ManufacturerManager.shared.manufacturers = Serializer.shared.load(key: "manufacturers", defaultValue: [])!
         }
     }
 }

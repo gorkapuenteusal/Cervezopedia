@@ -8,46 +8,70 @@
 import Foundation
 import UIKit
 
-final class LogoManager: ObservableObject { // TODO: - Crear vista `LogoManagerView`
+final class LogoManager {
+    private static let defaultLogo: UIImage = UIImage(systemName: "person.crop.circle")!
     static let shared = LogoManager()
     
     private let logosDirectory: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("Logos")
-    private let handler: ImageManager
+    private let logoManager: ImageManager
     
-    @Published var logoCache: ImageCache
+    private(set) var logoCache: ImageCache
     
     private init() {
-        handler = ImageManager(imagePath: logosDirectory)
-        logoCache = ImageCache(namesAndImages: handler.getNamesAndImages())
+        logoManager = ImageManager(imagePath: logosDirectory)
+        logoCache = ImageCache(namesAndImages: logoManager.getNamesAndImages())
         initLogosFolder()
     }
     
     private func initLogosFolder() {
-        try! FileManager.default.createDirectory(at: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("Logos"), withIntermediateDirectories: true)
+        do {
+            try FileManager.default.createDirectory(at: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("Logos"), withIntermediateDirectories: true)
+            print("Succesfully initialized \"Logos\" folder")
+        } catch {
+            print("Error while initializing \"Logos\" folder: FATAL ERROR!")
+        }
     }
     
-    func saveLogo(whitName name: String, andLogo logo: UIImage?) {
-        if let logo = logo {
-            if handler.save(image: logo, withName: name) {
-                _ = logoCache.addEntry(withName: name, andImage: logo)
+    func saveLogo(whitName name: String, andLogo logo: UIImage) {
+        if logoManager.save(image: logo, withName: name) {
+            if logoCache.addEntry(withName: name, andImage: logo) {
+                print("Succesfully saved image \"\(name)\"")
+                return
             }
-        } else { // TODO: - Eliminar esta opción
-            _ = logoCache.addEntry(withName: name, andImage: logo)
+            print("Error while saving image \"\(name)\": error in logoCache")
+            return
         }
+        print("Error while saving image \"\(name)\": error in logoManager")
     }
     
     func removeLogo(withName name: String) {
         if logoCache.removeEntry(withName: name) {
-            _ = handler.removeImage(withName: name)
+            if logoManager.removeImage(withName: name) {
+                print("Succesfully removed image \"\(name)\"")
+                return
+            }
+            print("Error while removing image \"\(name)\": error in logoCache")
+            return
         }
+        print("Error while removing image \"\(name)\": error in logoManager")
     }
     
     func clearLogos() {
-        handler.clearImages()
+        logoManager.clearImages()
         logoCache.clear()
+        print("Cleared logos")
     }
     
     func existsLogo(withName name: String) -> Bool {
         return logoCache.existsImage(withName: name)
+    }
+    
+    func getLogo(withName name: String) -> UIImage {
+        if logoCache.existsImage(withName: name) {
+            print("Returning \"\(name)\" logo")
+            return logoCache.getImage(withName: name)!
+        }
+        print("Returning default logo")
+        return Self.defaultLogo
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class BeerImageManager: ObservableObject { // TODO: - Crear vista `BeerImageManagerView`
+final class BeerImageManager: ObservableObject {
     static let shared = BeerImageManager()
     
     private let beerImagesDirectory: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("BeerImages")
@@ -26,12 +26,8 @@ final class BeerImageManager: ObservableObject { // TODO: - Crear vista `BeerIma
         try! FileManager.default.createDirectory(at: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("BeerImages"), withIntermediateDirectories: true)
     }
     
-    func saveBeerImage(whitName name: String, andBeerImage beerImage: UIImage?) {
-        if let beerImage = beerImage {
-            if handler.save(image: beerImage, withName: name) {
-                _ = beerImageCache.addEntry(withName: name, andImage: beerImage)
-            }
-        } else {
+    func saveBeerImage(whitName name: String, andBeerImage beerImage: UIImage) {
+        if handler.save(image: beerImage, withName: name) {
             _ = beerImageCache.addEntry(withName: name, andImage: beerImage)
         }
     }

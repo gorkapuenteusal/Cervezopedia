@@ -16,9 +16,14 @@ struct Serializer {
     ///   - value: Valor codificable a guardar.
     ///   - key: Clave asociada con el valor.
     public func save<T: Codable>(value: T, key: String) {
-        if let encoded = try? encoder.encode(value) {
+        do {
+            let encoded = try encoder.encode(value)
             standard.setValue(encoded, forKey: key)
             standard.synchronize()
+            
+            print("Successfully saved \"\(key)\"")
+        } catch {
+            print("Error while saving \"\(key)\": FATAL ERROR!")
         }
     }
     
@@ -31,9 +36,13 @@ struct Serializer {
     public func load<T: Codable>(key: String, defaultValue: T? = nil) -> T? {
         if let data = standard.object(forKey: key) as? Data {
             if let decodedValue = try? decoder.decode(T.self, from: data) {
+                print("Successfully loaded \"\(key)\"")
                 return decodedValue
             }
+            print("Error while loading \"\(key)\": FATAL ERROR")
+            return defaultValue
         }
+        print("Error while loading \"\(key)\": No data found")
         return defaultValue
     }
 }

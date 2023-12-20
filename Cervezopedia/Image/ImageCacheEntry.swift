@@ -8,17 +8,18 @@
 import Foundation
 import UIKit
 
-struct ImageCacheEntry { // TODO: - en vez de usar esto usar el `accesibilityIdentifier` como nombre de la imagen
+struct ImageCacheEntry: Hashable {
     var name: String
-    let image: UIImage?
+    let image: UIImage
     
     private static let defaultName = "image"
     
-    init?(name: String? = nil, image: UIImage?) {
-        guard let name = name ?? image?.description else {
-            return nil
-        }
+    init(name: String, image: UIImage) {
         self.name = name
         self.image = image
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
     }
 }
