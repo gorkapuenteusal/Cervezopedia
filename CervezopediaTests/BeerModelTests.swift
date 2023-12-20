@@ -14,8 +14,8 @@ final class BeerModelTests: XCTestCase { // TODO: - Añadir tests para fotos que
     
     override func setUp() {
         super.setUp()
-        noNilImagePath = BeerModel(name: "name", type: BeerType.Abbey, alcoholContent: 4.5, caloricIntake: 100, withImageName: "no_nil")
-        beer = BeerModel(name: "name", type: BeerType.Abbey, alcoholContent: 4.5, caloricIntake: 100, withImageName: "")
+        noNilImagePath = BeerModel(name: "name", type: BeerType.Abbey, alcoholContent: 4.5, caloricIntake: 100, beerImageName: "no_nil")
+        beer = BeerModel(name: "name", type: BeerType.Abbey, alcoholContent: 4.5, caloricIntake: 100, beerImageName: "")
     }
     
     func testWrongImagePath() {

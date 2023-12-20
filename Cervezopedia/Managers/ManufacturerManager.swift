@@ -1,14 +1,18 @@
 import Foundation
 
-/// Gestor de fabricantes encargado de administrar la lista de fabricantes en la aplicación.
+/// Gestor de fabricantes, el encargado de administrar la lista de fabricantes en la aplicación.
 final class ManufacturerManager: ObservableObject {
-    /// Instancia compartida de ManufacturerManager, utilizando el patrón Singleton.
+    // MARK: - Type properties
+    /// Instancia compartida de `ManufacturerManager`, utilizando el patrón *Singleton*.
     static let shared = ManufacturerManager()
     /// Lista de fabricantes de cerveza, publicada para notificar cambios a las vistas.
+    // MARK: - Properties
     @Published var manufacturers: [ManufacturerModel] = []
     
+    // MARK: - Initializers
     private init() {}
     
+    // MARK: - Methods
     /// Añade un nuevo fabricante a la lista, evitando duplicados.
     ///
     /// - Parameters:

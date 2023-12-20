@@ -21,15 +21,15 @@ final class ImageManagerTests: XCTestCase {
     
     func testSaveFailureRetreivingData() {
         let invalidImage: UIImage = UIImage()
-        XCTAssertFalse(manager.save(image: invalidImage, withName: "wrong"))
+        XCTAssertFalse(manager.saveImage(image: invalidImage, withName: "wrong"))
     }
     
     func testSaveFailureWriting() {
-        XCTAssertFalse(wrongPathManager.save(image: sunImage, withName: sun))
+        XCTAssertFalse(wrongPathManager.saveImage(image: sunImage, withName: sun))
     }
     
     func testSaveSucces() {
-        XCTAssertTrue(manager.save(image: sunImage, withName: sun))
+        XCTAssertTrue(manager.saveImage(image: sunImage, withName: sun))
         XCTAssertTrue(manager.existsImage(withName: sun))
     }
     
@@ -42,7 +42,7 @@ final class ImageManagerTests: XCTestCase {
     }
     
     func testRemoveImageSuccess() {
-        _ = manager.save(image: sunImage, withName: sun)
+        _ = manager.saveImage(image: sunImage, withName: sun)
         XCTAssertTrue(manager.removeImage(withName: sun))
         XCTAssertFalse(manager.existsImage(withName: sun))
     }
@@ -77,8 +77,8 @@ final class ImageManagerTests: XCTestCase {
     }
     
     private func saveTheThreeImages() {
-        _ = manager.save(image: sunImage, withName: sun)
-        _ = manager.save(image: moonImage, withName: moon)
-        _ = manager.save(image: heartImage, withName: heart)
+        _ = manager.saveImage(image: sunImage, withName: sun)
+        _ = manager.saveImage(image: moonImage, withName: moon)
+        _ = manager.saveImage(image: heartImage, withName: heart)
     }
 }

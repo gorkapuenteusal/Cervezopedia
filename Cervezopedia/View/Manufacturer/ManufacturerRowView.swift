@@ -8,23 +8,21 @@
 import SwiftUI
 
 struct ManufacturerRowView: View {
-    var name: String
-    var location: String
-    var logo: String
+    var manufacturer: ManufacturerModel
     
     var body: some View {
         HStack {
-            Image(uiImage: LogoManager.shared.getLogo(withName: logo))
+            Image(uiImage: LogoManager.shared.getLogo(withName: manufacturer.logoName))
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: 25, maxHeight: 25)
-            Text(name)
+            Text(manufacturer.name)
             Spacer()
             Circle()
                 .frame(width: 25, height: 25)
                 .foregroundColor(.accentColor)
                 .overlay(
-                    Text(location)
+                    Text(manufacturer.location)
                         .font(.subheadline)
                         .foregroundColor(.white)
                 )

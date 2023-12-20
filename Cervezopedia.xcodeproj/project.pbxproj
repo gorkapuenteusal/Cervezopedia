@@ -64,7 +64,7 @@
 		AA8F2E542B30C5C10024978F /* ManufacturerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerListView.swift; sourceTree = "<group>"; };
 		AA951D9D2B30CFA0004CCAF8 /* AddManufacturerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManufacturerView.swift; sourceTree = "<group>"; };
 		AAA3594C2B2DC5550021CAF0 /* ManufacturerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerManager.swift; sourceTree = "<group>"; };
-		AAA5932A2B31052E0029E95F /* LogoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoPicker.swift; path = Cervezopedia/View/LogoPicker.swift; sourceTree = SOURCE_ROOT; };
+		AAA5932A2B31052E0029E95F /* LogoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoPicker.swift; path = "Cervezopedia/View/Logo Picker/LogoPicker.swift"; sourceTree = SOURCE_ROOT; };
 		AAAC20752B321AAA00A5BD8D /* RegionPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionPicker.swift; sourceTree = "<group>"; };
 		AAACF2302B2B10AF00639FC0 /* CervezopediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CervezopediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAACF2322B2B10AF00639FC0 /* CervezopediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CervezopediaTests.swift; sourceTree = "<group>"; };
@@ -187,14 +187,30 @@
 		AA8F2E532B30C57D0024978F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AAA5932A2B31052E0029E95F /* LogoPicker.swift */,
-				AA8F2E542B30C5C10024978F /* ManufacturerListView.swift */,
-				AA951D9D2B30CFA0004CCAF8 /* AddManufacturerView.swift */,
-				AAE6EA0B2B31BEB100069E9D /* LogoPickerVM.swift */,
-				AAE6EA0D2B31D0C300069E9D /* ManufacturerRowView.swift */,
+				AAA60C3C2B336A4F00A3105C /* Manufacturer */,
+				AAA60C3B2B336A3700A3105C /* Logo Picker */,
 				AAAC20752B321AAA00A5BD8D /* RegionPicker.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AAA60C3B2B336A3700A3105C /* Logo Picker */ = {
+			isa = PBXGroup;
+			children = (
+				AAA5932A2B31052E0029E95F /* LogoPicker.swift */,
+				AAE6EA0B2B31BEB100069E9D /* LogoPickerVM.swift */,
+			);
+			path = "Logo Picker";
+			sourceTree = "<group>";
+		};
+		AAA60C3C2B336A4F00A3105C /* Manufacturer */ = {
+			isa = PBXGroup;
+			children = (
+				AA8F2E542B30C5C10024978F /* ManufacturerListView.swift */,
+				AA951D9D2B30CFA0004CCAF8 /* AddManufacturerView.swift */,
+				AAE6EA0D2B31D0C300069E9D /* ManufacturerRowView.swift */,
+			);
+			path = Manufacturer;
 			sourceTree = "<group>";
 		};
 		AAACF2312B2B10AF00639FC0 /* CervezopediaTests */ = {
