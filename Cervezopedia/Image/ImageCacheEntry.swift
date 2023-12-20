@@ -8,17 +8,21 @@
 import Foundation
 import UIKit
 
+/// Entrada del caché de imágenes. Es una clase inmutable ya que las imágenes o se añaden o se eliminan, no se pueden editar.
 struct ImageCacheEntry: Hashable {
-    var name: String
+    // MARK: - Properties
+    /// La clave o *key* del caché. Es el nombre con el que se guarda la imagen en la carpeta de la aplicación correspondiente.
+    let name: String
+    /// El valor o *value* del caché.
     let image: UIImage
     
-    private static let defaultName = "image"
-    
+    // MARK: - Initializers
     init(name: String, image: UIImage) {
         self.name = name
         self.image = image
     }
     
+    // MARK: - Hashable requirements
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)
     }

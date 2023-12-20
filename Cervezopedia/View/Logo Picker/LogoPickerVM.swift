@@ -15,8 +15,8 @@ final class LogoPickerVM: ObservableObject {
             guard let imageSelection else { return }
             Task {
                 if let data = try? await imageSelection.loadTransferable(type: Data.self) {
-                    if let uiimage = UIImage(data: data) {
-                            DispatchQueue.main.async {LogoManager.shared.saveLogo(whitName: UUID().uuidString, andLogo: uiimage)
+                    if let logo = UIImage(data: data) {
+                        DispatchQueue.main.async {LogoManager.shared.save(logo: logo, withName: UUID().uuidString)
                         }
                     }
                 }

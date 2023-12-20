@@ -17,11 +17,11 @@ final class ManufacturerModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        wrongLocation = ManufacturerModel(name: "wrongLocation", location: "wrong", withLogoName: "")
-        noNilLogoPath = ManufacturerModel(name: "noNilLogoPath", location: "US", withLogoName: "no_nil")
+        wrongLocation = ManufacturerModel(name: "wrongLocation", location: "wrong", logoName: "")
+        noNilLogoPath = ManufacturerModel(name: "noNilLogoPath", location: "US", logoName: "no_nil")
         /// Manufacturador nacional. En este caso la simulación se ejectua como si el usuario fuese estadounidense
-        national = ManufacturerModel(name: "national", location: "US", withLogoName: "")
-        imported = ManufacturerModel(name: "imported", location: "ES", withLogoName: "")
+        national = ManufacturerModel(name: "national", location: "US", logoName: "")
+        imported = ManufacturerModel(name: "imported", location: "ES", logoName: "")
     }
     
     func testWrongLocation() {

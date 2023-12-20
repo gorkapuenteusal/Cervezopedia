@@ -9,30 +9,30 @@ import XCTest
 @testable import Cervezopedia
 
 final class SerializerTests: XCTestCase {
-    lazy var beer: BeerModel = BeerModel(name: "A beer", type: BeerType.Abbey, alcoholContent: 1, caloricIntake: 1, withImageName: "")!
+    lazy var beer: BeerModel = BeerModel(name: "A beer", type: BeerType.Abbey, alcoholContent: 1, caloricIntake: 1, beerImageName: "")!
     lazy var beerList: [BeerModel] = [
         beer,
-        BeerModel(name: "Another beer", type: BeerType.Altbier, alcoholContent: 2, caloricIntake: 2, withImageName: "")!,
-        BeerModel(name: "One more beer", type: BeerType.BarleyWine, alcoholContent: 3, caloricIntake: 3, withImageName: "")!
+        BeerModel(name: "Another beer", type: BeerType.Altbier, alcoholContent: 2, caloricIntake: 2, beerImageName: "")!,
+        BeerModel(name: "One more beer", type: BeerType.BarleyWine, alcoholContent: 3, caloricIntake: 3, beerImageName: "")!
     ]
-    lazy var manufacturer: ManufacturerModel = ManufacturerModel(name: "A manufacturer", location: "US", withLogoName: "", beers: beerList)!
+    lazy var manufacturer: ManufacturerModel = ManufacturerModel(name: "A manufacturer", location: "US", logoName: "", beers: beerList)!
     lazy var manufacturerList: [ManufacturerModel] = [
         manufacturer,
         ManufacturerModel(
             name: "Another manufacturer",
-            location: "AR", withLogoName: "",
+            location: "AR", logoName: "",
             beers: [
-                BeerModel(name: "Yet another beer", type: BeerType.Bitter, alcoholContent: 4, caloricIntake: 4, withImageName: "")!,
-                BeerModel(name: "One more to go", type: BeerType.Bock, alcoholContent: 5, caloricIntake: 5, withImageName: "")!
+                BeerModel(name: "Yet another beer", type: BeerType.Bitter, alcoholContent: 4, caloricIntake: 4, beerImageName: "")!,
+                BeerModel(name: "One more to go", type: BeerType.Bock, alcoholContent: 5, caloricIntake: 5, beerImageName: "")!
             ]
         )!,
         ManufacturerModel(
             name: "One more manufacturer",
             location: "ES",
-            withLogoName: "",
+            logoName: "",
             beers: [
-                BeerModel(name: "One more won't hurt", type: BeerType.BrownAle, alcoholContent: 6, caloricIntake: 6, withImageName: "")!,
-                BeerModel(name: "One more and we are bound", type: BeerType.DoradaPampeana, alcoholContent: 7, caloricIntake: 7, withImageName: "")!
+                BeerModel(name: "One more won't hurt", type: BeerType.BrownAle, alcoholContent: 6, caloricIntake: 6, beerImageName: "")!,
+                BeerModel(name: "One more and we are bound", type: BeerType.DoradaPampeana, alcoholContent: 7, caloricIntake: 7, beerImageName: "")!
             ]
         )!
     ]
