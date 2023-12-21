@@ -71,6 +71,7 @@
 		AA951D9D2B30CFA0004CCAF8 /* AddManufacturerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManufacturerView.swift; sourceTree = "<group>"; };
 		AAA3594C2B2DC5550021CAF0 /* ManufacturerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerManager.swift; sourceTree = "<group>"; };
 		AAA5932A2B31052E0029E95F /* LogoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoPicker.swift; path = "Cervezopedia/View/Logo Picker/LogoPicker.swift"; sourceTree = SOURCE_ROOT; };
+		AAA5B9182B34DFC300A361C6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AAA60C3D2B33B03600A3105C /* ManufacturerDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerDetailedView.swift; sourceTree = "<group>"; };
 		AAAC20752B321AAA00A5BD8D /* RegionPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionPicker.swift; sourceTree = "<group>"; };
 		AAACF2302B2B10AF00639FC0 /* CervezopediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CervezopediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +112,7 @@
 		AA0E1FE22B2A349D00049DAF = {
 			isa = PBXGroup;
 			children = (
+				AAA5B9182B34DFC300A361C6 /* README.md */,
 				AA0E1FED2B2A349D00049DAF /* Cervezopedia */,
 				AAACF2312B2B10AF00639FC0 /* CervezopediaTests */,
 				AA0E1FEC2B2A349D00049DAF /* Products */,
