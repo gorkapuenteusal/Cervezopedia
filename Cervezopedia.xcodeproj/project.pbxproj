@@ -11,7 +11,46 @@
 		AA0E1FF12B2A349E00049DAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E1FF02B2A349E00049DAF /* ContentView.swift */; };
 		AA0E1FF32B2A349F00049DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0E1FF22B2A349F00049DAF /* Assets.xcassets */; };
 		AA0E1FF62B2A349F00049DAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0E1FF52B2A349F00049DAF /* Preview Assets.xcassets */; };
+		AA6AFB9E2B2A3D97004892DF /* BeerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AFB9D2B2A3D97004892DF /* BeerType.swift */; };
+		AA6AFBA02B2A401E004892DF /* BeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AFB9F2B2A401E004892DF /* BeerModel.swift */; };
+		AA6AFBA22B2A4472004892DF /* ManufacturerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AFBA12B2A4472004892DF /* ManufacturerModel.swift */; };
+		AA6B10E82B2F63E400146B08 /* LogoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B10E72B2F63E400146B08 /* LogoManager.swift */; };
+		AA6B10EC2B2F6D4300146B08 /* ImageCacheEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B10EB2B2F6D4300146B08 /* ImageCacheEntry.swift */; };
+		AA6B10EE2B2F6E3900146B08 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B10ED2B2F6E3900146B08 /* ImageCache.swift */; };
+		AA6B10F02B2F7DDC00146B08 /* BeerImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B10EF2B2F7DDC00146B08 /* BeerImageManager.swift */; };
+		AA8F2E492B309A5F0024978F /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F2E482B309A5F0024978F /* ImageCacheTests.swift */; };
+		AA8F2E4B2B30A3EB0024978F /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F2E4A2B30A3EB0024978F /* ImageManagerTests.swift */; };
+		AA8F2E552B30C5C10024978F /* ManufacturerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F2E542B30C5C10024978F /* ManufacturerListView.swift */; };
+		AA951D9E2B30CFA0004CCAF8 /* AddManufacturerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA951D9D2B30CFA0004CCAF8 /* AddManufacturerView.swift */; };
+		AAA3594D2B2DC5550021CAF0 /* ManufacturerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA3594C2B2DC5550021CAF0 /* ManufacturerManager.swift */; };
+		AAA5932B2B31052E0029E95F /* LogoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5932A2B31052E0029E95F /* LogoPicker.swift */; };
+		AAA60C3E2B33B03600A3105C /* ManufacturerDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA60C3D2B33B03600A3105C /* ManufacturerDetailedView.swift */; };
+		AAAC20762B321AAA00A5BD8D /* RegionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAC20752B321AAA00A5BD8D /* RegionPicker.swift */; };
+		AAACF2332B2B10AF00639FC0 /* CervezopediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAACF2322B2B10AF00639FC0 /* CervezopediaTests.swift */; };
+		AAACF23A2B2B10F200639FC0 /* ManufacturerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAACF2392B2B10F200639FC0 /* ManufacturerModelTests.swift */; };
+		AAACF23C2B2B404B00639FC0 /* BeerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAACF23B2B2B404B00639FC0 /* BeerModelTests.swift */; };
+		AAACF2422B2B5D7700639FC0 /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAACF2412B2B5D7700639FC0 /* Serializer.swift */; };
+		AAACF2442B2B61C800639FC0 /* SerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAACF2432B2B61C800639FC0 /* SerializerTests.swift */; };
+		AABB718D2B3467070043A89D /* AddBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB718C2B3467070043A89D /* AddBeerView.swift */; };
+		AABB71902B3468AC0043A89D /* BeerImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB718F2B3468AC0043A89D /* BeerImagePicker.swift */; };
+		AABB71922B34691D0043A89D /* BeerImagePickerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB71912B34691D0043A89D /* BeerImagePickerVM.swift */; };
+		AABB71942B3473DB0043A89D /* BeerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB71932B3473DB0043A89D /* BeerRowView.swift */; };
+		AABB719A2B349C3A0043A89D /* BeerDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB71992B349C3A0043A89D /* BeerDetailedView.swift */; };
+		AAE6EA0C2B31BEB100069E9D /* LogoPickerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE6EA0B2B31BEB100069E9D /* LogoPickerVM.swift */; };
+		AAE6EA0E2B31D0C300069E9D /* ManufacturerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE6EA0D2B31D0C300069E9D /* ManufacturerRowView.swift */; };
+		AAE853932B2DEA6D009477DF /* ManufacturerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE853922B2DEA6D009477DF /* ManufacturerManagerTests.swift */; };
+		AAE8539B2B2DF9FF009477DF /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8539A2B2DF9FF009477DF /* ImageManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAACF2342B2B10AF00639FC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0E1FE32B2A349D00049DAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA0E1FEA2B2A349D00049DAF;
+			remoteInfo = Cervezopedia;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AA0E1FEB2B2A349D00049DAF /* Cervezopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cervezopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +58,48 @@
 		AA0E1FF02B2A349E00049DAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA0E1FF22B2A349F00049DAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA0E1FF52B2A349F00049DAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA6AFB9D2B2A3D97004892DF /* BeerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerType.swift; sourceTree = "<group>"; };
+		AA6AFB9F2B2A401E004892DF /* BeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModel.swift; sourceTree = "<group>"; };
+		AA6AFBA12B2A4472004892DF /* ManufacturerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerModel.swift; sourceTree = "<group>"; };
+		AA6B10E72B2F63E400146B08 /* LogoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoManager.swift; sourceTree = "<group>"; };
+		AA6B10EB2B2F6D4300146B08 /* ImageCacheEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheEntry.swift; sourceTree = "<group>"; };
+		AA6B10ED2B2F6E3900146B08 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		AA6B10EF2B2F7DDC00146B08 /* BeerImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerImageManager.swift; sourceTree = "<group>"; };
+		AA8F2E482B309A5F0024978F /* ImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageCacheTests.swift; path = Cervezopedia/ImageCacheTests.swift; sourceTree = SOURCE_ROOT; };
+		AA8F2E4A2B30A3EB0024978F /* ImageManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageManagerTests.swift; path = Cervezopedia/ImageManagerTests.swift; sourceTree = SOURCE_ROOT; };
+		AA8F2E542B30C5C10024978F /* ManufacturerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerListView.swift; sourceTree = "<group>"; };
+		AA951D9D2B30CFA0004CCAF8 /* AddManufacturerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManufacturerView.swift; sourceTree = "<group>"; };
+		AAA3594C2B2DC5550021CAF0 /* ManufacturerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerManager.swift; sourceTree = "<group>"; };
+		AAA5932A2B31052E0029E95F /* LogoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoPicker.swift; path = "Cervezopedia/View/Logo Picker/LogoPicker.swift"; sourceTree = SOURCE_ROOT; };
+		AAA5B9182B34DFC300A361C6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AAA60C3D2B33B03600A3105C /* ManufacturerDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerDetailedView.swift; sourceTree = "<group>"; };
+		AAAC20752B321AAA00A5BD8D /* RegionPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionPicker.swift; sourceTree = "<group>"; };
+		AAACF2302B2B10AF00639FC0 /* CervezopediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CervezopediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAACF2322B2B10AF00639FC0 /* CervezopediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CervezopediaTests.swift; sourceTree = "<group>"; };
+		AAACF2392B2B10F200639FC0 /* ManufacturerModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerModelTests.swift; sourceTree = "<group>"; };
+		AAACF23B2B2B404B00639FC0 /* BeerModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModelTests.swift; sourceTree = "<group>"; };
+		AAACF2412B2B5D7700639FC0 /* Serializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
+		AAACF2432B2B61C800639FC0 /* SerializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SerializerTests.swift; path = Cervezopedia/SerializerTests.swift; sourceTree = SOURCE_ROOT; };
+		AABB718C2B3467070043A89D /* AddBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBeerView.swift; sourceTree = "<group>"; };
+		AABB718F2B3468AC0043A89D /* BeerImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerImagePicker.swift; sourceTree = "<group>"; };
+		AABB71912B34691D0043A89D /* BeerImagePickerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerImagePickerVM.swift; sourceTree = "<group>"; };
+		AABB71932B3473DB0043A89D /* BeerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRowView.swift; sourceTree = "<group>"; };
+		AABB71992B349C3A0043A89D /* BeerDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailedView.swift; sourceTree = "<group>"; };
+		AAE6EA0B2B31BEB100069E9D /* LogoPickerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPickerVM.swift; sourceTree = "<group>"; };
+		AAE6EA0D2B31D0C300069E9D /* ManufacturerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerRowView.swift; sourceTree = "<group>"; };
+		AAE853922B2DEA6D009477DF /* ManufacturerManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManufacturerManagerTests.swift; path = Cervezopedia/ManufacturerManagerTests.swift; sourceTree = SOURCE_ROOT; };
+		AAE8539A2B2DF9FF009477DF /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AA0E1FE82B2A349D00049DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAACF22D2B2B10AF00639FC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,7 +112,9 @@
 		AA0E1FE22B2A349D00049DAF = {
 			isa = PBXGroup;
 			children = (
+				AAA5B9182B34DFC300A361C6 /* README.md */,
 				AA0E1FED2B2A349D00049DAF /* Cervezopedia */,
+				AAACF2312B2B10AF00639FC0 /* CervezopediaTests */,
 				AA0E1FEC2B2A349D00049DAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0E1FEB2B2A349D00049DAF /* Cervezopedia.app */,
+				AAACF2302B2B10AF00639FC0 /* CervezopediaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +131,11 @@
 		AA0E1FED2B2A349D00049DAF /* Cervezopedia */ = {
 			isa = PBXGroup;
 			children = (
+				AA8F2E532B30C57D0024978F /* View */,
+				AA8F2E4E2B30C3C00024978F /* IO */,
+				AA8F2E4F2B30C3EE0024978F /* Image */,
+				AA8F2E502B30C4100024978F /* Managers */,
+				AA8F2E512B30C4330024978F /* Data */,
 				AA0E1FEE2B2A349E00049DAF /* CervezopediaApp.swift */,
 				AA0E1FF02B2A349E00049DAF /* ContentView.swift */,
 				AA0E1FF22B2A349F00049DAF /* Assets.xcassets */,
@@ -65,6 +150,117 @@
 				AA0E1FF52B2A349F00049DAF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AA8F2E4E2B30C3C00024978F /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				AAACF2412B2B5D7700639FC0 /* Serializer.swift */,
+				AAE8539A2B2DF9FF009477DF /* ImageManager.swift */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		AA8F2E4F2B30C3EE0024978F /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B10EB2B2F6D4300146B08 /* ImageCacheEntry.swift */,
+				AA6B10ED2B2F6E3900146B08 /* ImageCache.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		AA8F2E502B30C4100024978F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B10E72B2F63E400146B08 /* LogoManager.swift */,
+				AA6B10EF2B2F7DDC00146B08 /* BeerImageManager.swift */,
+				AAA3594C2B2DC5550021CAF0 /* ManufacturerManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AA8F2E512B30C4330024978F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AA8F2E522B30C4400024978F /* Beer */,
+				AA6AFBA12B2A4472004892DF /* ManufacturerModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AA8F2E522B30C4400024978F /* Beer */ = {
+			isa = PBXGroup;
+			children = (
+				AA6AFB9F2B2A401E004892DF /* BeerModel.swift */,
+				AA6AFB9D2B2A3D97004892DF /* BeerType.swift */,
+			);
+			path = Beer;
+			sourceTree = "<group>";
+		};
+		AA8F2E532B30C57D0024978F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AABB718E2B3468940043A89D /* Beer Image Picker */,
+				AABB718B2B3466FB0043A89D /* Beer */,
+				AAA60C3C2B336A4F00A3105C /* Manufacturer */,
+				AAA60C3B2B336A3700A3105C /* Logo Picker */,
+				AAAC20752B321AAA00A5BD8D /* RegionPicker.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AAA60C3B2B336A3700A3105C /* Logo Picker */ = {
+			isa = PBXGroup;
+			children = (
+				AAA5932A2B31052E0029E95F /* LogoPicker.swift */,
+				AAE6EA0B2B31BEB100069E9D /* LogoPickerVM.swift */,
+			);
+			path = "Logo Picker";
+			sourceTree = "<group>";
+		};
+		AAA60C3C2B336A4F00A3105C /* Manufacturer */ = {
+			isa = PBXGroup;
+			children = (
+				AA8F2E542B30C5C10024978F /* ManufacturerListView.swift */,
+				AAA60C3D2B33B03600A3105C /* ManufacturerDetailedView.swift */,
+				AA951D9D2B30CFA0004CCAF8 /* AddManufacturerView.swift */,
+				AAE6EA0D2B31D0C300069E9D /* ManufacturerRowView.swift */,
+			);
+			path = Manufacturer;
+			sourceTree = "<group>";
+		};
+		AAACF2312B2B10AF00639FC0 /* CervezopediaTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA8F2E4A2B30A3EB0024978F /* ImageManagerTests.swift */,
+				AA8F2E482B309A5F0024978F /* ImageCacheTests.swift */,
+				AAE853922B2DEA6D009477DF /* ManufacturerManagerTests.swift */,
+				AAACF2432B2B61C800639FC0 /* SerializerTests.swift */,
+				AAACF23B2B2B404B00639FC0 /* BeerModelTests.swift */,
+				AAACF2322B2B10AF00639FC0 /* CervezopediaTests.swift */,
+				AAACF2392B2B10F200639FC0 /* ManufacturerModelTests.swift */,
+			);
+			path = CervezopediaTests;
+			sourceTree = "<group>";
+		};
+		AABB718B2B3466FB0043A89D /* Beer */ = {
+			isa = PBXGroup;
+			children = (
+				AABB718C2B3467070043A89D /* AddBeerView.swift */,
+				AABB71932B3473DB0043A89D /* BeerRowView.swift */,
+				AABB71992B349C3A0043A89D /* BeerDetailedView.swift */,
+			);
+			path = Beer;
+			sourceTree = "<group>";
+		};
+		AABB718E2B3468940043A89D /* Beer Image Picker */ = {
+			isa = PBXGroup;
+			children = (
+				AABB718F2B3468AC0043A89D /* BeerImagePicker.swift */,
+				AABB71912B34691D0043A89D /* BeerImagePickerVM.swift */,
+			);
+			path = "Beer Image Picker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +283,24 @@
 			productReference = AA0E1FEB2B2A349D00049DAF /* Cervezopedia.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AAACF22F2B2B10AF00639FC0 /* CervezopediaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAACF2362B2B10AF00639FC0 /* Build configuration list for PBXNativeTarget "CervezopediaTests" */;
+			buildPhases = (
+				AAACF22C2B2B10AF00639FC0 /* Sources */,
+				AAACF22D2B2B10AF00639FC0 /* Frameworks */,
+				AAACF22E2B2B10AF00639FC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAACF2352B2B10AF00639FC0 /* PBXTargetDependency */,
+			);
+			name = CervezopediaTests;
+			productName = CervezopediaTests;
+			productReference = AAACF2302B2B10AF00639FC0 /* CervezopediaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +313,10 @@
 				TargetAttributes = {
 					AA0E1FEA2B2A349D00049DAF = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					AAACF22F2B2B10AF00639FC0 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = AA0E1FEA2B2A349D00049DAF;
 					};
 				};
 			};
@@ -116,6 +334,7 @@
 			projectRoot = "";
 			targets = (
 				AA0E1FEA2B2A349D00049DAF /* Cervezopedia */,
+				AAACF22F2B2B10AF00639FC0 /* CervezopediaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +349,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AAACF22E2B2B10AF00639FC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +363,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA3594D2B2DC5550021CAF0 /* ManufacturerManager.swift in Sources */,
+				AA951D9E2B30CFA0004CCAF8 /* AddManufacturerView.swift in Sources */,
+				AAA5932B2B31052E0029E95F /* LogoPicker.swift in Sources */,
+				AABB71902B3468AC0043A89D /* BeerImagePicker.swift in Sources */,
+				AAAC20762B321AAA00A5BD8D /* RegionPicker.swift in Sources */,
+				AA6AFB9E2B2A3D97004892DF /* BeerType.swift in Sources */,
+				AABB71942B3473DB0043A89D /* BeerRowView.swift in Sources */,
+				AA6AFBA22B2A4472004892DF /* ManufacturerModel.swift in Sources */,
+				AAE8539B2B2DF9FF009477DF /* ImageManager.swift in Sources */,
+				AA6B10F02B2F7DDC00146B08 /* BeerImageManager.swift in Sources */,
+				AAACF2422B2B5D7700639FC0 /* Serializer.swift in Sources */,
+				AA6B10EE2B2F6E3900146B08 /* ImageCache.swift in Sources */,
+				AABB718D2B3467070043A89D /* AddBeerView.swift in Sources */,
+				AABB71922B34691D0043A89D /* BeerImagePickerVM.swift in Sources */,
 				AA0E1FF12B2A349E00049DAF /* ContentView.swift in Sources */,
+				AA6B10EC2B2F6D4300146B08 /* ImageCacheEntry.swift in Sources */,
 				AA0E1FEF2B2A349E00049DAF /* CervezopediaApp.swift in Sources */,
+				AAA60C3E2B33B03600A3105C /* ManufacturerDetailedView.swift in Sources */,
+				AAE6EA0C2B31BEB100069E9D /* LogoPickerVM.swift in Sources */,
+				AAE6EA0E2B31D0C300069E9D /* ManufacturerRowView.swift in Sources */,
+				AA8F2E552B30C5C10024978F /* ManufacturerListView.swift in Sources */,
+				AA6B10E82B2F63E400146B08 /* LogoManager.swift in Sources */,
+				AABB719A2B349C3A0043A89D /* BeerDetailedView.swift in Sources */,
+				AA6AFBA02B2A401E004892DF /* BeerModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAACF22C2B2B10AF00639FC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAACF23A2B2B10F200639FC0 /* ManufacturerModelTests.swift in Sources */,
+				AA8F2E492B309A5F0024978F /* ImageCacheTests.swift in Sources */,
+				AAE853932B2DEA6D009477DF /* ManufacturerManagerTests.swift in Sources */,
+				AA8F2E4B2B30A3EB0024978F /* ImageManagerTests.swift in Sources */,
+				AAACF2442B2B61C800639FC0 /* SerializerTests.swift in Sources */,
+				AAACF2332B2B10AF00639FC0 /* CervezopediaTests.swift in Sources */,
+				AAACF23C2B2B404B00639FC0 /* BeerModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAACF2352B2B10AF00639FC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA0E1FEA2B2A349D00049DAF /* Cervezopedia */;
+			targetProxy = AAACF2342B2B10AF00639FC0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AA0E1FF72B2A349F00049DAF /* Debug */ = {
@@ -315,6 +585,40 @@
 			};
 			name = Release;
 		};
+		AAACF2372B2B10AF00639FC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.gorkiiuss.CervezopediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cervezopedia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cervezopedia";
+			};
+			name = Debug;
+		};
+		AAACF2382B2B10AF00639FC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.gorkiiuss.CervezopediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cervezopedia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cervezopedia";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -332,6 +636,15 @@
 			buildConfigurations = (
 				AA0E1FFA2B2A349F00049DAF /* Debug */,
 				AA0E1FFB2B2A349F00049DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAACF2362B2B10AF00639FC0 /* Build configuration list for PBXNativeTarget "CervezopediaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAACF2372B2B10AF00639FC0 /* Debug */,
+				AAACF2382B2B10AF00639FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
