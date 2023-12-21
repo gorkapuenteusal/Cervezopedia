@@ -8,7 +8,7 @@
 import Foundation
 
 /// Modelo de la cerveza.
-final class BeerModel: Codable, Equatable, ObservableObject {
+final class BeerModel: Codable, Equatable, Hashable, Identifiable, ObservableObject {
     // MARK: - Properties
     @Published var name: String
     @Published var type: BeerType
@@ -26,21 +26,27 @@ final class BeerModel: Codable, Equatable, ObservableObject {
     }
     
     /// Cadena de texto identificativa de cada cerveza. No pueden existir dos iguales en el mismo manufacturador.
-    @Published private var id: String;
+    @Published var id: String;
     
     // MARK: - Initializers
     /// Inicializador opcional. Si el `imagePath` que se pasa como parámetro no es `nil` y encima no existe en el `BeerImageManager` devuelve `nil`.
     init?(name: String, type: BeerType, alcoholContent: Double, caloricIntake: Int, beerImageName: String) {
-        guard name.isEmpty else {
+        print("Initializing beer \(name)")
+        guard !name.isEmpty else {
             print("Failed to initialize beer: the name cannot be empty")
             return nil
         }
         
-        guard alcoholContent <= 0 else {
+        guard type != BeerType.sinFiltro else {
+            print("Failed to initialize beer. invalid beer type")
+            return nil
+        }
+        
+        guard alcoholContent >= 0 else {
             print("Failed to initialize beer: the alcohol content must be either positive or zero")
             return nil
         }
-        guard caloricIntake <= 0 else {
+        guard caloricIntake >= 0 else {
             print("Failed to initialize beer: the caloric intake must be either positive or zero")
             return nil
         }
@@ -87,5 +93,10 @@ final class BeerModel: Codable, Equatable, ObservableObject {
     // MARK: - Equatable requirements
     static func == (lhs: BeerModel, rhs: BeerModel) -> Bool {
         return lhs.id == rhs.id
+    }
+    
+    // MARK: - Hashable requirements
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }

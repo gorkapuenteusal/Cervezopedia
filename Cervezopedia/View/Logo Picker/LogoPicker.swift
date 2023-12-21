@@ -38,19 +38,13 @@ struct LogoPicker: View { // TODO: - Añadir un isLoading para poner de pega, ad
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 80, height: 80)
-                        .overlay(
-                            selectedLogoName == logoCacheEntry.name ? Color.blue.opacity(0.5) : Color.clear
-                        )
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                        .onTapGesture {
-                            selectedLogoName = logoCacheEntry.name
-                        }
-                        .onLongPressGesture {
-                            LogoManager.shared.removeLogo(withName: logoCacheEntry.name)
-                            if selectedLogoName == logoCacheEntry.name {
-                                selectedLogoName = ""
+                            .overlay(
+                                selectedLogoName == logoCacheEntry.name ? Color.blue.opacity(0.5) : Color.clear
+                            )
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                            .onTapGesture {
+                                selectedLogoName = logoCacheEntry.name
                             }
-                        }
                     }
                 }
                 
@@ -63,32 +57,33 @@ struct LogoPicker: View { // TODO: - Añadir un isLoading para poner de pega, ad
                     selectedLogoName = ""
                 } label: {
                     Label("Eliminar logo seleccionado", systemImage: "trash")
-                }.tint(.red)
+                }
+                .tint(.red)
                 
                 Button {
                     isShowingDeleteAllAlert = true
                 } label: {
                     Label("Eliminar todos los logos", systemImage: "trash.fill")
                 }.tint(.red)
-                .alert(isPresented: $isShowingDeleteAllAlert) {
-                    Alert(
-                        title: Text("¿Eliminar todos los logos?"),
-                        message: Text("Esta acción eliminará todos los logos. ¿Estás seguro?"),
-                        primaryButton: .destructive(Text("Eliminar todos")) {
-                            LogoManager.shared.clearLogos()
-                        },
-                        secondaryButton: .cancel()
-                    )
-                }
+                    .alert(isPresented: $isShowingDeleteAllAlert) {
+                        Alert(
+                            title: Text("¿Eliminar todos los logos?"),
+                            message: Text("Esta acción eliminará todos los logos. ¿Estás seguro?"),
+                            primaryButton: .destructive(Text("Eliminar todos")) {
+                                LogoManager.shared.clearLogos()
+                            },
+                            secondaryButton: .cancel()
+                        )
+                    }
                 
-                PhotosPicker(selection: $viewModel.imageSelection, matching: .all(of: [.images, .not(.livePhotos)])) {
+                PhotosPicker(selection: $viewModel.imageSelection, matching: .images) {
                     Text("Abrir galería para agregar logo")
                 }
-                
-                Button("Elegir logo \(selectedLogoName.isEmpty ? "por defecto" : "seleccionado")") {
-                    selectLogo()
-                }
             }
+            
+            Section { Button("Elegir logo \(selectedLogoName.isEmpty ? "por defecto" : "seleccionado")") {
+                selectLogo()
+            } }
         }
         .alert(isPresented: $isShowingError) {
             Alert(title: Text("Error al eliminar logo"), message: Text("No se puede eliminar un logo sin elegirlo"), dismissButton: .default(Text("Ok")))
