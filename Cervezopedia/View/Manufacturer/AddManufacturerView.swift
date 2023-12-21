@@ -24,13 +24,21 @@ struct AddManufacturerView: View {
             .font(.title)
             .padding()
         Form {
-            Button {
-                addingLogo = true
-            } label: {
-                Label("Añadir logo", systemImage: "plus")
-            }
-            .sheet(isPresented: $addingLogo) {
-                LogoPicker(isPresented: $addingLogo, pickedLogoName: $logoName)
+            HStack {
+                Button {
+                    addingLogo = true
+                } label: {
+                    Label("Añadir logo", systemImage: "plus")
+                }
+                .sheet(isPresented: $addingLogo) {
+                    LogoPicker(isPresented: $addingLogo, pickedLogoName: $logoName)
+                }
+                Spacer()
+                Image(uiImage: LogoManager.shared.getLogo(withName: logoName))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 50, height: 50)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
             }
             
             Section(header: Text("Nombre")) { TextField("...", text: $name).textInputAutocapitalization(.never) }
@@ -38,8 +46,8 @@ struct AddManufacturerView: View {
             Section (header: Text("Región")) { RegionPicker(location: $location) }
             
             Section (header: Text("Vista previa")) {
-                if let manufacturer = ManufacturerModel(name: name, location: location, logoName: logoName) {
-                    ManufacturerRowView(manufacturer: manufacturer)
+                if ManufacturerModel(name: name, location: location, logoName: logoName) != nil {
+                    ManufacturerRowView(name: name, location: location, logoName: logoName)
                 } else {
                     Text("No hay vista previa disponible")
                 }

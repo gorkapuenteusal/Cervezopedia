@@ -10,7 +10,16 @@ import Foundation
 /// Modelo del manufacturador de cervezass
 final class ManufacturerModel: Codable, Equatable, Hashable, Identifiable, ObservableObject  { // TODO: - Añadir tests para fotos que existan y que no existan
     // MARK: - Properties
-    @Published var name: String
+    @Published var name: String {
+        didSet {
+            guard !name.isEmpty else {
+                name = oldValue
+                return
+            }
+            Serializer.shared.save(value: ManufacturerManager.shared.manufacturers, key: "manufacturers")
+        }
+    }
+    
     @Published var beers: [BeerModel]
     
     /// Localización del manufacturador y sus cervezas. Se gestiona mediante el subsistema `Locale` de *Swift*. Si se modifica a un valor no valido permanecerá el antiguo
@@ -22,6 +31,7 @@ final class ManufacturerModel: Codable, Equatable, Hashable, Identifiable, Obser
                 location = oldValue
                 return
             }
+            Serializer.shared.save(value: ManufacturerManager.shared.manufacturers, key: "manufacturers")
         }
     }
     
@@ -32,6 +42,7 @@ final class ManufacturerModel: Codable, Equatable, Hashable, Identifiable, Obser
                 logoName = oldValue
                 return
             }
+            Serializer.shared.save(value: ManufacturerManager.shared.manufacturers, key: "manufacturers")
         }
     }
     
@@ -71,6 +82,20 @@ final class ManufacturerModel: Codable, Equatable, Hashable, Identifiable, Obser
         } else {
             return false
         }
+    }
+    
+    public func addBeer(toAdd: BeerModel) -> Bool {
+        guard !beers.contains(toAdd) else { return false }
+        beers.append(toAdd)
+        return true
+    }
+    
+    public func removeBeer(toRemoveIdx: IndexSet) {
+        beers.remove(atOffsets: toRemoveIdx)
+    }
+    
+    public func clearBeers() {
+        beers = []
     }
     
     // MARK: - Codable requirements

@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var manager = ManufacturerManager.shared
+    
     var body: some View {
         VStack {
-            ManufacturerListView()
+            ManufacturerListView(manager: manager)
         }
         .onAppear {
             ManufacturerManager.shared.manufacturers = Serializer.shared.load(key: "manufacturers", defaultValue: [])!
